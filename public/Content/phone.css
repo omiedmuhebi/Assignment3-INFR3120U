@@ -1,0 +1,408 @@
+/* Start of media query for screens with max width of 480px */
+@media only screen and (max-width: 480px) {
+
+  /* Universal styles */
+  * {
+    font-family: 'Poppins', sans-serif; /* Sets the font family for all elements */
+    box-sizing: border-box; /* Adjusts the box model to include padding and border */
+  }
+  
+  /* Body styles */
+  body {
+    background-image: linear-gradient(to right, #000428, #004e92); /* Sets a linear gradient background */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    background-size: cover; /* Ensures the background covers the entire viewport */
+    display: flex; /* Sets the display to flex for flexible box layout */
+    color: white; /* Sets the text color to white */
+    flex-direction: column; /* Arranges flex items in a column */
+    min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    max-width: 100%; /* Sets maximum width to 100% */
+    margin: 0; /* Removes margin */
+    padding: 0; /* Removes padding */
+  }
+
+  /* Home page specific styles */
+  #home-page #container-home-text {
+    display: flex; /* Sets the container to use a flexible box layout */
+    justify-content: center; /* Horizontally centers the content within the container */
+    align-items: center; /* Vertically centers the content within the container */
+    height: 100vh; /* Sets the container's height to be 100% of the viewport height */
+    text-align: center; /* Centers the text within the container */
+    animation: moveUpDown 2s ease-in-out infinite alternate; /* Applies a vertical movement animation */
+  }
+  
+  #home-page .greeting-home {
+    font-size: 7vw; /* Sets the font size relative to 7% of the viewport width */
+    color: white; /* Sets the text color to white */
+    opacity: 0; /* Makes the text fully transparent initially */
+    animation: fadeIn 2s ease-in forwards; /* Applies a fade-in animation over 2 seconds */
+  }
+  
+  /* Fade-in animation keyframes */
+  @keyframes fadeIn {
+    to {
+      opacity: 1; /* Animates the element to become fully opaque */
+    }
+  }
+  
+  /* Up and down movement animation keyframes */
+  @keyframes moveUpDown {
+    from {
+      transform: translateY(-10px); /* Starts the animation 10 pixels above the original position */
+    }
+    to {
+      transform: translateY(10px); /* Moves the element 10 pixels below the original position */
+    }
+  }
+  
+  /* Footer styles */
+  #footer {
+    background-color: black; /* Sets the footer background color to black */
+    padding: 2vw 0; /* Adds vertical padding equivalent to 2% of the viewport width */
+    color: #fafafa; /* Sets the text color within the footer to a light shade */
+    position: relative; /* Sets the position context to relative */
+    bottom: 0; /* Positions the footer at the bottom of its parent container */
+    width: 100%; /* Sets the width of the footer to cover the full width of the parent */
+    margin: 0; /* Removes any default margin */
+  }
+
+  .footer-content {
+    max-width: 100%; /* Ensures the footer content doesn't exceed 100% width */
+    margin: 0 auto; /* Centers the footer content horizontally */
+    padding: 0 1.5vw; /* Adds horizontal padding equivalent to 1.5% of the viewport width */
+    display: flex; /* Uses flexbox layout for the footer content */
+    flex-direction: column; /* Stacks the footer items vertically */
+    text-align: center; /* Centers the text within the footer content */
+    align-items: center; /* Vertically centers the items within the footer content */
+  }
+
+  .footer-divider {
+    width: 90%; /* Sets the width of the divider to 90% of its parent */
+    border: none; /* Removes any border from the divider */
+    height: 0.15vw; /* Sets the height of the divider equivalent to 0.15% of the viewport width */
+    background-color: white; /* Sets the divider's background color to white */
+  }
+
+  #footer h5 {
+    margin: 0; /* Removes any default margin from the heading */
+    font-size: 3vw; /* Sets the font size of the heading relative to 3% of the viewport width */
+    line-height: 1.5; /* Sets the line height of the heading */
+  }
+
+  .footer-links {
+    display: flex; /* Uses flexbox layout for the footer links */
+  }
+
+  .footer-links a {
+    color: #fafafa; /* Sets the text color of the links to a light shade */
+    transition: color 0.3s ease; /* Adds a smooth transition effect for color changes */
+    padding: 1vw; /* Adds padding equivalent to 1% of the viewport width */
+    border-radius: 50%; /* Makes the links circular */
+    padding: 3vw; /* Overwrites the previous padding, setting it to 3% of the viewport width */
+  }
+
+  .footer-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Changes the background color on hover with some transparency */
+  }
+  /* End of footer styles */
+
+/* Styles for the about me page */
+#about-me-main {
+  animation: fadeIn 1s forwards; /* Applies a fade-in animation over 1 second */
+  max-width: 100%; /* Ensures the main section doesn't exceed 100% width */
+  margin: 0 auto; /* Centers the main section horizontally */
+  padding: 20px; /* Adds padding around the main section */
+  color: white; /* Sets the text color within the main section to white */
+}
+
+/* Image hover animation */
+.figure-for-about img:active {
+  transform: scale(1.05); /* Scales the image up slightly when active (usually on click) */
+}
+
+/* Button hover animation */
+.about-button:hover {
+  transform: scale(1.05); /* Scales the button up slightly on hover */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease; /* Adds smooth transitions for both the transform and background color */
+}
+
+/* Adding smooth transition for other elements */
+#article-for-about, .aside-for-about, #section-for-about, #video-container {
+  transition: all 0.3s ease-in-out; /* Smoothly transitions all properties over 0.3 seconds with an ease-in-out timing */
+}
+
+/* On hover, give the section a slight lift */
+#section-for-about:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Adds a shadow to create a lift effect on hover */
+}
+
+/* Sidebar styles */
+.aside-for-about {
+  flex: 1; /* Allows the sidebar to grow and fill 1 portion of the flex container */
+  margin-right: 20px; /* Adds a right margin */
+}
+
+/* Styles for the figure in the sidebar */
+.figure-for-about {
+  background-color: rgba(0, 0, 0, 0.5); /* Sets a semi-transparent black background */
+  padding: 2vw; /* Adds padding */
+  border-radius: 5px; /* Rounds the corners */
+}
+
+/* Styles for images inside the figure */
+.figure-for-about img {
+  max-width: 100%; /* Ensures image width doesn't exceed container */
+  border-radius: 5px; /* Rounds image corners */
+  transition: transform 0.3s ease-in-out; /* Adds smooth transition for transformations */
+}
+
+/* Styles for the figure caption */
+.figure-for-about figcaption {
+  text-align: center; /* Centers the caption text */
+  padding: 10px 0; /* Adds vertical padding */
+  font-style: italic; /* Italicizes the text */
+}
+
+/* Main content section styles */
+#section-for-about {
+  flex: 2; /* Takes up 2 portions of the flex container */
+  padding: 20px; /* Adds padding */
+  background-color: rgba(0, 0, 0, 0.5); /* Sets a semi-transparent black background */
+  border-radius: 5px; /* Rounds the corners */
+}
+
+/* Paragraph styles inside the main content section */
+.about-me-paragraph1 {
+  line-height: 1.6; /* Sets line height for readability */
+}
+
+/* Video container styles */
+#video-container {
+  margin-top: 30px; /* Adds space above the container */
+  background-color: rgba(0, 0, 0, 0.5); /* Sets a semi-transparent black background */
+  padding: 20px; /* Adds padding */
+  border-radius: 5px; /* Rounds the corners */
+  text-align: center; /* Centers the content */
+}
+
+/* Styles for video captions */
+.video-caption {
+  margin-bottom: 15px; /* Adds space below the caption */
+}
+
+/* Button styles */
+.about-button {
+  margin-top: 3vw; /* Adds margin to button*/
+  background-color: black; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Removes border */
+  padding: 10px 20px; /* Adds padding */
+  border-radius: 5px; /* Rounds the corners */
+  cursor: pointer; /* Changes cursor to indicate it's clickable */
+  transition: all 0.5s ease; /* Adds transition for all properties */
+}
+
+/* Button active state styles */
+.about-button:active {
+  background-color: #004e92; /* Changes background color when clicked */
+  color: white; /* Keeps text color white */
+}
+
+/* Mobile responsive adjustments */
+#article-for-about {
+  flex-direction: column; /* Stacks items vertically */
+}
+
+/* Adjust sidebar width on small screens */
+.aside-for-about {
+  max-width: 100%; /* Full width */
+  margin-right: 0; /* Removes right margin */
+}
+
+/* Adjust main section width on small screens */
+#section-for-about {
+  flex: 1; /* Adjusts flex value */
+}
+
+/* Adjust video size for small screens */
+#video-container video {
+  width: 100%; /* Full width */
+  height: auto; /* Auto-adjusts height */
+}
+
+/* Adjust padding on small screens */
+#about-me-main, .figure-for-about, #section-for-about, #video-container {
+  padding: 10px; /* Reduces padding */
+}
+/* End of CSS specific to the "about-me" page */
+
+
+
+
+
+/* Projects page styles */
+#projects-content {
+  font-family: 'Arial', sans-serif; /* Sets the font to Arial with a sans-serif fallback */
+  color: white; /* Text color set to white */
+  line-height: 1.6; /* Spacing between lines */
+  width: 80%; /* Width set to 80% of the parent container */
+  margin: 20px auto; /* Vertical margin of 20px and horizontal margin auto for centering */
+  max-width: 1000px; /* Maximum width of the content */
+}
+
+/* Project section styling */
+#projects-content .project-section {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  padding: 20px; /* Padding around the content */
+  margin-bottom: 20px; /* Bottom margin */
+  border-radius: 5px; /* Rounded corners */
+  transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+}
+
+/* Project heading */
+#projects-content h3 {
+  color: white; /* Text color set to white */
+  margin-bottom: 10px; /* Bottom margin */
+}
+
+/* Project description */
+#projects-content .project-description {
+  color: white; /* Text color set to white */
+  margin-bottom: 15px; /* Bottom margin */
+}
+
+/* GitHub link styling */
+#projects-content .github-link {
+  display: inline-block; /* Inline block display */
+  background-color: black; /* Black background color */
+  color: white; /* Text color set to white */
+  padding: 10px 15px; /* Padding */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Removes underline from link */
+  transition: background-color 0.5s ease; /* Smooth transition for background color */
+}
+
+#projects-content .github-link:hover {
+  background-color: white; /* Changes background to white on hover */
+  color: black; /* Text color changes to black on hover */
+}
+
+#projects-content .github-link:active {
+  background-color: #004e92; /* Background color when link is clicked */
+  color: white; /* Text color remains white when link is clicked */
+}
+
+/* Icon styling */
+#projects-content .fa-github, #projects-content .fa-solid {
+  margin-left: 5px; /* Left margin for the icons */
+}
+
+/* Adjusted width and margin for the projects content */
+#projects-content {
+  width: 90%; /* Increased width to 90% */
+  margin: 10px auto; /* Top and bottom margin reduced to 10px, horizontal auto for centering */
+}
+
+/* Adjusted padding for project sections */
+#projects-content .project-section {
+  padding: 15px; /* Reduced padding */
+}
+
+/* Adjusted padding for GitHub links */
+#projects-content .github-link {
+  padding: 8px 12px; /* Slightly reduced padding */
+}
+/* End of projects styles */
+
+
+
+
+/* Contact page styling */
+#contact-content {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)); /* Linear gradient background */
+  backdrop-filter: blur(10px); /* Blur effect for the background */
+  padding: 20px; /* Padding around the content */
+  margin: 10px; /* Margin around the content */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Box shadow for depth */
+  width: 90%; /* Width of the content */
+  margin: 0 auto; /* Horizontal auto margin for centering */
+  margin-bottom: 3vw; /* Bottom margin */
+}
+
+#contact-content h1 {
+  color: white; /* Text color set to white */
+  font-size: 7vw; /* Dynamic font size based on viewport width */
+  text-align: center; /* Centered text */
+  margin-bottom: 20px; /* Bottom margin */
+}
+
+#contact-content .input-group label {
+  margin-bottom: 8px; /* Bottom margin */
+  color: white; /* Text color set to white */
+  display: block; /* Block display to have label on its own line */
+}
+
+#contact-content input[type="text"],
+#contact-content input[type="email"],
+#contact-content textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Padding for better touch interaction */
+  margin-bottom: 20px; /* Bottom margin */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f4f2ff; /* Light background color */
+  outline: none; /* No outline when focused */
+  font-size: 16px; /* Font size for readability */
+}
+
+#contact-content .button-group {
+  display: flex; /* Flex display for alignment */
+  flex-direction: column; /* Vertical stacking of buttons */
+  gap: 10px; /* Space between buttons */
+}
+
+#contact-content .reset-button,
+#contact-content .submit-button {
+  padding: 12px 24px; /* Padding for better touch interaction */
+  background-color: white; /* White background */
+  color: black; /* Text color set to black */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor indicates clickable */
+  transition: all 0.5s ease-in-out; /* Smooth transition for all properties */
+  text-align: center; /* Centered text */
+}
+
+#contact-content .reset-button:active,
+#contact-content .submit-button:active {
+  background-color: black; /* Background color when clicked */
+  color: white; /* Text color set to white when clicked */
+}
+
+.social-links {
+  background-color: black; /* Background color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 20px; /* Padding */
+  display: flex; /* Flex display for alignment */
+  justify-content: center; /* Horizontally centered */
+  align-items: center; /* Vertically centered */
+  gap: 15px; /* Space between icons */
+  margin-top: 20px; /* Top margin */
+}
+
+.social-links i {
+  font-size: 24px; /* Icon size */
+  margin: 0; /* No margin */
+  color: #fafafa; /* Light grey color */
+}
+/* End of contact page styles */
+
+
+
+
+}
+
+
+
+

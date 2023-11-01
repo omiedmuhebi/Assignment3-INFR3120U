@@ -1,0 +1,498 @@
+
+
+/* Media query that applies the following styles only on screens with a minimum width of 960 pixels. */
+@media only screen and (min-width: 960px) {
+
+  /* Global style for all elements: Sets the default font and adjusts the box-sizing model. */
+  * {
+    font-family: 'Poppins', sans-serif;  /* Sets the default font family for all elements to 'Poppins', with a fallback of sans-serif. */
+    box-sizing: border-box;  /* Changes the default CSS box model to include padding and border in the width and height of elements. */
+  }
+
+  /* Specifies the general styles for the body element of the webpage. */
+  body {
+    background-image: linear-gradient(to right, #000428, #004e92);  /* Sets a linear gradient background for the body, transitioning from color #000428 to #004e92 from left to right. */
+    display: flex;  /* Sets the display mode of the body to flexbox, enabling the use of flexbox properties. */
+    color: white;  /* Sets the default text color for the body to white. */
+    flex-direction: column;  /* Aligns flex items vertically (in a column) inside the body. */
+    min-height: 100vh;  /* Sets the minimum height of the body to 100% of the viewport height, ensuring it fills the entire vertical space. */
+    max-width: 100%;  /* Limits the maximum width of the body to 100% of the viewport width to prevent overflow. */
+    margin: 0;  /* Removes any default margin from the body. */
+    padding: 0;  /* Removes any default padding from the body. */
+  }
+
+
+  /* Styles for homepage content */
+
+/* Selector for the container holding the homepage text */
+#container-home-text {
+  display: flex;  /* Uses the flexbox layout to arrange children elements. */
+  justify-content: center;  /* Horizontally centers the content inside the container. */
+  align-items: center;  /* Vertically centers the content inside the container. */
+  height: 100vh;  /* Sets the container's height to the full height of the viewport. */
+  text-align: center;  /* Centers the text within the container. */
+  animation: moveUpDown 2s ease-in-out infinite alternate; /* Applies a gentle up and down animation to the container. */
+}
+
+/* Selector for the greeting text on the homepage */
+.greeting-home {
+  font-size: 5vw;  /* Sets the font size relative to 5% of the viewport width. */
+  color: white;  /* Sets the text color to white. */
+  opacity: 0;  /* Initially makes the text invisible. */
+  animation: fadeIn 2s ease-in forwards; /* Applies a fade-in effect to the text. */
+}
+
+/* Defines the fade-in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;  /* Changes the text's opacity to fully visible at the end of the animation. */
+  }
+}
+
+/* Defines the gentle movement animation for the container */
+@keyframes moveUpDown {
+  from {
+    transform: translateY(-10px);  /* Initially moves the container up by 10 pixels. */
+  }
+  to {
+    transform: translateY(10px);  /* Moves the container down by 10 pixels at the end of the animation. */
+  }
+}
+
+/* End of styles for homepage content */
+
+
+
+
+
+/* Footer Styles */
+
+/* Selector for the footer */
+#footer {
+  background-color: black; /* Sets a black background color for the footer. */
+  padding: 2vw 0; /* Vertical padding based on the viewport width. */
+  color: #fafafa; /* Sets the text color to a light shade, almost white. */
+  position: relative; /* Positions the footer relative to its normal position. */
+  bottom: 0; /* Aligns the bottom of the footer to the bottom of its container. */
+  width: 100%; /* Makes the footer span the full width of the viewport. */
+  margin: 0; /* Removes any default margin. */
+}
+
+/* Selector for the content inside the footer */
+.footer-content {
+  max-width: 100%; /* Sets the footer to the full width of the page. */
+  margin: 0 auto; /* Centers the content horizontally if a max-width is set. */
+  padding: 0 1.5vw; /* Horizontal padding based on the viewport width. */
+  display: flex; /* Uses flexbox layout for inner elements. */
+  flex-direction: column; /* Stacks icons vertically. */
+  text-align: center; /* Centers text and content horizontally. */
+  align-items: center; /* Aligns items in the center vertically. */
+}
+
+/* Selector for the divider in the footer */
+.footer-divider {
+  width: 90%; /* Sets the width of the divider, adjust as needed. */
+  border: none; /* Removes any default border. */
+  height: 0.15vw; /* Sets the height of the divider based on the viewport width. */
+  background-color: white; /* Sets the divider color to white. */
+}
+
+/* Selector for heading (h5) elements inside the footer */
+#footer h5 {
+  margin: 0; /* Removes any default margin. */
+  font-size: 1.5vw; /* Sets the font size relative to the viewport width. */
+  line-height: 1.5; /* Sets the line height for better readability. */
+}
+
+/* Selector for the links container in the footer */
+.footer-links {
+  display: flex; /* Uses flexbox layout for the links. */
+}
+
+/* Selector for anchor (a) elements inside the footer links */
+.footer-links a {
+  color: #fafafa; /* Sets the icon color to a light shade, almost white. */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transitions for hover effects. */
+  padding: 1vw; /* Adds padding around the icon for easier tapping on mobile. */
+}
+
+/* Hover effect for links in the footer */
+.footer-links a:hover {
+  transform: translateY(-5px); /* Creates a subtle lift effect when hovered. */
+}
+
+/* End of footer styles */
+
+
+
+
+
+
+/* Styles for about page */
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Starts invisible */
+    transform: translateY(2vw); /* Starts slightly lower */
+  }
+  to {
+    opacity: 1; /* Fades to fully visible */
+    transform: translateY(0); /* Ends in original vertical position */
+  }
+}
+
+/* Main container for the about me section */
+#about-me-main {
+  animation: fadeIn 1s forwards; /* Applies fade-in animation */
+  max-width: auto; /* Allows the width to adjust automatically */
+  margin: 0 auto; /* Centers the container */
+  padding: 2vw; /* Applies padding */
+  color: white; /* Sets text color to white */
+}
+
+/* Image hover effect in about me section */
+.figure-for-about img:hover {
+  transform: scale(1.05); /* Slightly enlarges the image */
+}
+
+/* Button hover effect */
+.about-button:hover {
+  transform: scale(1.05); /* Slightly enlarges the button */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease; /* Smooth transitions for scaling and color change */
+}
+
+#article-for-about, .aside-for-about, #section-for-about, #video-container {
+  transition: all 0.3s ease-in-out; /* Applies a general transition effect */
+}
+
+#section-for-about:hover {
+  transform: translateY(-0.5vw); /* Moves the section slightly up */
+  box-shadow: 0 0.5vw 1.5vw rgba(0,0,0,0.2); /* Adds a shadow for a 3D effect */
+}
+
+#article-for-about {
+  display: flex; /* Uses flexbox layout */
+  flex-wrap: wrap; /* Allows items to wrap to next line */
+  justify-content: space-between; /* Spreads items with space between */
+}
+
+.aside-for-about {
+  flex: 1; /* Takes up 1 part of the flex space */
+  margin-right: 2vw; /* Adds margin on the right */
+}
+
+.figure-for-about {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 2vw; /* Adds padding */
+  border-radius: 0.5vw; /* Rounds the corners */
+}
+
+#article-for-about h5 {
+  font-size: 1.5vw; /* Sets font size */
+}
+
+.figure-for-about img {
+  max-width: 100%; /* Ensures image doesn't exceed its container */
+  border-radius: 0.5vw; /* Rounds the corners */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+}
+
+.figure-for-about figcaption {
+  text-align: center; /* Centers the text */
+  padding: 1vw 0; /* Adds vertical padding */
+  font-style: italic; /* Makes the text italic */
+}
+
+#section-for-about {
+  flex: 2; /* Takes up 2 parts of the flex space */
+  padding: 2vw; /* Adds padding */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 0.5vw; /* Rounds the corners */
+}
+
+#section-for-about h3 {
+  font-size: 4vw; /* Sets font size */
+}
+
+.about-me-paragraph1 {
+  line-height: 1.6; /* Sets the line height */
+  font-size: 1.7vw; /* Sets font size */
+}
+
+#video-container {
+  margin-top: 3vw; /* Adds top margin */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 2vw; /* Adds padding */
+  border-radius: 0.5vw; /* Rounds the corners */
+  text-align: center; /* Centers the text */
+  display: flex; /* Uses flexbox layout */
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+}
+
+#video-container video {
+  width: 40vw; /* Sets the width */
+  height: fit-content; /* Adjusts the height to fit the content */
+}
+
+#video-container h5 {
+  font-size: 2vw; /* Sets font size */
+}
+
+.video-caption {
+  margin-bottom: 3vw; /* Adds bottom margin */
+}
+
+.about-button {
+  background-color: black; /* Sets background color */
+  margin-top: 2vw; /* Adds top margin */
+  color: #fff; /* Sets text color to white */
+  border: none; /* Removes border */
+  padding: 1vw 2vw; /* Adds padding */
+  border-radius: 0.5vw; /* Rounds the corners */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  font-size: 1.3vw; /* Sets font size */
+  transition: all 0.5s ease; /* Smooth transition for all properties */
+}
+
+.about-button:hover {
+  background-color: white; /* Changes background color */
+  color: black; /* Changes text color */
+}
+
+.about-button:active {
+  background-color: #004e92; /* Changes background color when clicked */
+  color: white; /* Keeps text color white */
+}
+
+/* End of CSS styles for about page */
+
+
+
+
+
+/* Projects page styles */
+#projects-content {
+  color: white; /* Sets text color to white */
+  line-height: 1.6; /* Sets line height for text */
+  width: 80%; /* Sets width to 80% */
+  margin: 20px auto; /* Centers the content with margin */
+  max-width: auto; /* Allows the width to adjust automatically */
+}
+
+#projects-content .project-section {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  padding: 1.5vw; /* Adds padding */
+  margin-bottom: 1.5vw; /* Adds bottom margin */
+  border-radius: 5px; /* Rounds the corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+}
+
+#projects-content .project-section:hover {
+  transform: translateY(-10px); /* Moves the section slightly up */
+}
+
+#projects-content h3 {
+  color: white; /* Sets text color to white */
+  margin-bottom: 10px; /* Adds bottom margin */
+  font-size: 2vw; /* Sets font size */
+}
+
+#projects-content .project-description {
+  color: white; /* Sets text color to white */
+  margin-bottom: 15px; /* Adds bottom margin */
+  font-size: 1.3vw; /* Sets font size */
+}
+
+#projects-content .github-link {
+  display: inline-block; /* Makes the link inline-block for styling */
+  background-color: black; /* Sets background color */
+  color: white; /* Sets text color to white */
+  padding: 10px 15px; /* Adds padding */
+  border-radius: 5px; /* Rounds the corners */
+  text-decoration: none; /* Removes underline from link */
+  transition: background-color 0.5s ease; /* Smooth transition for background color */
+  font-size: 1.3vw; /* Sets font size */
+}
+
+#projects-content .github-link:hover {
+  background-color: white; /* Changes background color */
+  color: black; /* Changes text color */
+}
+
+#projects-content .github-link:active {
+  background-color: #004e92; /* Changes background color when clicked */
+  color: white; /* Keeps text color white */
+}
+
+#projects-content .fa-github, #projects-content .fa-solid {
+  margin-left: 5px; /* Adds left margin to icons */
+}
+/* End of styles for projects page */
+
+
+
+
+
+/* Contact page styling */
+#contact-content {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)); /* Background with gradient overlay */
+  backdrop-filter: blur(10px); /* Blurred background effect */
+  padding: 30px; /* Adds padding */
+  margin: 20px; /* Adds margin */
+  border-radius: 10px; /* Rounds the corners */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds subtle shadow */
+  width: 80%; /* Sets width */
+  margin: 0 auto; /* Centers the content */
+  margin-bottom: 3vw; /* Adds bottom margin */
+}
+
+/* Header styling within contact content */
+#contact-content h1 {
+  font-size: 3vw; /* Sets font size */
+  text-align: center; /* Centers the text */
+  margin-bottom: 30px; /* Adds bottom margin */
+  cursor: pointer; /* Changes cursor to pointer */
+  color: white; /* Sets text color to white */
+}
+
+/* Input group label styling */
+#contact-content .input-group label {
+  display: block; /* Makes label block level */
+  margin-bottom: 8px; /* Adds bottom margin */
+  color: white; /* Sets text color to white */
+  font-size: 1.5vw; /* Sets font size */
+}
+
+/* Styling for text, email inputs and textarea */
+#contact-content input[type="text"],
+#contact-content input[type="email"],
+#contact-content textarea {
+  width: 100%; /* Sets width to 100% */
+  padding: 10px; /* Adds padding */
+  margin-bottom: 20px; /* Adds bottom margin */
+  border: none; /* Removes border */
+  border-radius: 5px; /* Rounds the corners */
+  background-color: #f4f2ff; /* Sets background color */
+  outline: none; /* Removes outline */
+  transition: all ease 0.5s; /* Adds transition for all properties */
+  font-size: 1.3vw; /* Sets font size */
+}
+
+/* Hover effect for inputs and textarea */
+#contact-content input[type="text"]:hover,
+#contact-content input[type="email"]:hover,
+#contact-content textarea:hover {
+  transform: translateY(-7px); /* Moves element up slightly */
+}
+
+/* Button group styling */
+#contact-content .button-group {
+  display: flex; /* Sets display to flex */
+  justify-content: space-between; /* Spaces buttons evenly */
+}
+
+/* Reset and submit button styling */
+#contact-content .reset-button,
+#contact-content .submit-button {
+  padding: 0.5vw 1vw; /* Adds padding */
+  background-color: white; /* Sets background color */
+  color: black; /* Sets text color */
+  border: none; /* Removes border */
+  border-radius: 5px; /* Rounds the corners */
+  cursor: pointer; /* Changes cursor to pointer */
+  transition: all 0.5s ease; /* Adds transition for all properties */
+  cursor: pointer; /* Changes cursor to pointer */
+}
+
+/* Hover effect for buttons */
+#contact-content .reset-button:hover,
+#contact-content .submit-button:hover {
+  background-color: black; /* Changes background color */
+  color: white; /* Changes text color */
+  transform: translateY(-10px); /* Moves button up slightly */
+  cursor: pointer; /* Changes cursor to pointer */
+}
+
+/* Icon styling */
+#contact-content i {
+  margin-right: 10px; /* Adds right margin */
+  cursor: pointer; /* Changes cursor to pointer */
+}
+
+/* Animation keyframes for bouncing effect */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  10% {
+    transform: translateY(-3px);
+  }
+
+  15% {
+    transform: translateY(-4px);
+  }
+
+  20% {
+    transform: translateY(-6px);
+  }
+
+  40% {
+    transform: translateY(-9px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-9px);
+  }
+
+  70% {
+    transform: translateY(-6px);
+  }
+
+  80% {
+    transform: translateY(-4px);
+  }
+
+  90% {
+    transform: translateY(-3px);
+  }
+}
+
+
+/* Flex properties for form and social links */
+.contact-form, .social-links {
+  flex: 1;
+  padding: 0 20px;
+}
+
+/* Social links styling */
+.social-links {
+  background-color: black; /* Sets background color */
+  border-radius: 0.5vw; /* Rounds the corners */
+  padding: 1vw;
+  display: flex; /* Sets display to flex */
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  gap: 20px; /* Adds space between items */
+  margin-top: 7vw; /* Adds top margin */
+}
+
+/* Icon styling in social links */
+.social-links i {
+  margin: 20px; /* Adds margin */
+  font-size: 2em; /* Sets font size */
+}
+
+/* Hover effect for icons */
+.social-links i:hover{
+  animation: bounce ease 0.7s infinite; /* Applies bouncing animation */
+}
+/* End of CSS styling for contact page */
+
+}

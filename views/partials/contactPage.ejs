@@ -1,0 +1,52 @@
+<!-- Contact page -->                                       
+
+<% if (currentPage === 'contact') { %> <!-- Server-side scripting condition to check if the current page is 'contact' -->
+
+  <section id="contact-content"> <!-- Section for the contact content, identified by 'contact-content' ID -->
+    <h1><%= headingContactPage%></h1> <!-- Main heading for the contact section, dynamically loaded from a variable -->
+
+    <div class="contact-container"> <!-- Container for the contact content, using 'contact-container' class -->
+
+      <!-- Form to send an email -->
+      <div class="contact-form"> <!-- Div for the contact form, using 'contact-form' class -->
+        <form action="mailto:omied.muhebi@ontariotechu.net" method="post" enctype="text/plain">  <!-- Form element with 'mailto' action -->
+
+          <div class="input-group"> <!-- Group for the name input, using 'input-group' class -->
+              <label for="name"><%= nameContact%></label> <!-- Label for the name input, dynamically loaded from a variable -->
+              <input type="text" id="name" name="name" placeholder="Enter full name here" size="80" required> <!-- Text input for user's name -->
+          </div>
+
+          <div class="input-group"> <!-- Group for the email input, using 'input-group' class -->
+              <label for="email"><%= emailContact%></label <!-- Label for the email input, dynamically loaded from a variable -->
+              <input type="email" id="email" name="email" placeholder="Enter your email address here" size="80" required> <!-- Email input -->
+          </div>
+
+          <div class="input-group"> <!-- Group for the message input, using 'input-group' class -->
+              <label for="message"><%= messageContact%></label <!-- Label for the message input, dynamically loaded from a variable -->
+              <textarea id="message" name="comments" placeholder="Enter your message here" cols="80" rows="8"></textarea> <!-- Textarea for message -->
+          </div>
+
+          <div class="button-group"> <!-- Group for the form buttons, using 'button-group' class -->
+              <input class="reset-button" type="reset" value="Reset"> <!-- Button to reset the form -->
+              <input class="submit-button" type="submit" value="Submit"> <!-- Button to submit the form -->
+          </div>
+        </form>
+      </div>
+      
+      <!-- Social media links -->
+      <div class="social-links"> <!-- Div for social media links, using 'social-links' class -->
+          <!-- LinkedIn link -->
+          <a href="https://www.linkedin.com/in/omied-muhebi-9a2371291/" title="Visit my LinkedIn Profile" target="_blank" rel="noopener noreferrer"> 
+              <i class="fa-brands fa-linkedin fa-2xl" style="color: #fafafa;"></i></a>
+          <!-- GitHub link -->
+          <a href="https://github.com/omiedmuhebi?tab=repositories" title="Check out my GitHub repositories" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-github fa-2xl" style="color: #fafafa;"></i></a>
+          <!-- Discord link -->
+          <a href="https://discord.gg/M9kbA8aCsf" title="Join my Discord server" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-discord fa-lg" style="color: #ffffff;"></i></a>
+      </div>
+    </div>
+    
+    <% } %> <!-- End of the server-side scripting condition -->
+
+</section>                                                   
