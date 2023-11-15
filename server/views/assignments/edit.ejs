@@ -1,0 +1,60 @@
+<%- include ../partials/header%> <!-- Include the header partial (EJS template) into the current page -->
+
+<%- include ../partials/navbar%> <!-- Include the navigation bar partial (EJS template) into the current page -->
+
+<!--Content for Edit Page -->
+
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1 class="title"><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="classTextField">Class</label>
+                    <input type="text" class="form-control"
+                    id="classTextField"
+                    placeholder="Enter the name of the class"
+                    value = "<%=assignment.Class%>"
+                    name="Class" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nameTextField">Name</label>
+                    <input type="text" class="form-control"
+                    id="NameTextField"
+                    placeholder="Enter the name of the assignment"
+                    value = "<%=assignment.Name%>"
+                    name="Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="statusTextField">Status</label>
+                    <input type="text" class="form-control"
+                    id="StatusTextField"
+                    placeholder="Enter the status of the assignment"
+                    value = "<%=assignment.Status%>"
+                    name="Status" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="DueTextField">Due Date</label>
+                    <input type="text" class="form-control"
+                    id="DueTextField"
+                    placeholder="Enter the date the assignment is due"
+                    value = "<%=assignment.Due%>"
+                    name="Due" required>
+                </div>
+                <br>
+                <div class="form-buttons">
+                <button class="submit-button" type="submit-button">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/assignments-list" class="cancel-button">
+                        <i class="fa-solid fa-ban"></i>  Cancel</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

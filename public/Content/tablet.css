@@ -1,391 +1,326 @@
-/* This media query applies styles for screens with a width between 481px and 959px */
+/* Global style for all elements */
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Styles for homepage content */
+body.homeBackground {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 132, 255);
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.homeBody {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px;
+    color: #333333;
+}
+
+.headingHome h1, .headingHome h2 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    color: white;
+}
+
+.text-homePage {
+    font-size: 1rem;
+    margin: 20px 0;
+    color: white;
+}
+
+.buttonHome {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.buttonHome:hover {
+    background-color: green;
+}
+
+/* Footer Styles */
+#footer {
+    background-color: black;
+    padding: 2vw 0;
+    color: #fafafa;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.footer-content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.footer-divider {
+    width: 90%;
+    border: none;
+    height: 0.15vw;
+    background-color: white;
+}
+
+#footer h5 {
+    margin: 0;
+    font-size: 1.5vw;
+    line-height: 1.5;
+}
+
+.footer-links {
+    display: flex;
+}
+
+.footer-links a {
+    color: #fafafa;
+    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 1vw;
+}
+
+.footer-links a:hover {
+    transform: translateY(-5px);
+}
+
+/* Media Query for Tablets */
 @media only screen and (min-width: 481px) and (max-width: 959px) {
+    .homeBody {
+        max-width: 90%; /* Adjust width for tablets */
+    }
 
-  /* Applies the 'Poppins' font family and sets box-sizing to border-box for all elements */
-  * {
-      font-family: 'Poppins', sans-serif;
-      box-sizing: border-box;
-  }
+    .headingHome h1 {
+        font-size: 2.2rem; /* Adjust font size for tablet screens */
+    }
 
-  /* Styles for the body element */
-  body {
-      background-image: linear-gradient(to right, #000428, #004e92); /* Background gradient from dark blue to light blue */
-      display: flex; /* Enables flexible box layout */
-      font: white; /* Sets font color to white */
-      flex-direction: column; /* Stacks child elements vertically */
-      min-height: 100vh; /* Minimum height of 100% of the viewport height */
-      max-width: 100%; /* Maximum width of 100% */
-      margin: 0; /* No margin */
-      padding: 0; /* No padding */
-  }
+    .headingHome h2 {
+        font-size: 2rem;
+    }
 
-  /* Styles specific to the home page */
-  #home-page #container-home-text {
-      display: flex; /* Enables flexible box layout */
-      justify-content: center; /* Centers content horizontally */
-      align-items: center; /* Centers content vertically */
-      height: 100vh; /* Height of 100% of the viewport height */
-      text-align: center; /* Centers text */
-      animation: moveUpDown 2s ease-in-out infinite alternate; /* Applies the moveUpDown animation */
-  }
+    .text-homePage {
+        font-size: 1.2rem; /* Slightly larger text for better readability */
+    }
 
-  #home-page .greeting-home {
-      font-size: 5vw; /* Font size relative to viewport width */
-      color: white; /* Text color */
-      opacity: 0; /* Initially transparent */
-      animation: fadeIn 2s ease-in forwards; /* Applies the fadeIn animation */
-  }
+    .buttonHome {
+        padding: 12px 24px; /* Slightly larger buttons for easier interaction */
+    }
 
-  /* fadeIn animation keyframes */
-  @keyframes fadeIn {
-      to {
-          opacity: 1; /* Fades in to full opacity */
-      }
-  }
+    #footer h5 {
+        font-size: 2vw; /* Adjust font size for footer text */
+    }
 
-  /* moveUpDown animation keyframes */
-  @keyframes moveUpDown {
-      from {
-          transform: translateY(-10px); /* Starts 10px above its initial position */
-      }
-      to {
-          transform: translateY(10px); /* Ends 10px below its initial position */
-      }
-  }
+    /* assignments CSS */
 
-  /* Footer Styles */
-  #footer {
-      background-color: black; /* Dark background */
-      padding: 2vw 0; /* Vertical padding */
-      color: #fafafa; /* White text */
-      position: relative;
-      bottom: 0; /* Positioned at the bottom */
-      width: 100%; /* Full width */
-      margin: 0; /* No margin */
-  }
+    label{
+        color: white;
+        margin: 0.5vw;
+        font-size: 1.5vw;
+    }
+    .container {
+        max-width: 90%; /* Adjust the width of the container */
+    }
 
-  .footer-content {
-      max-width: 100%; /* Full width */
-      margin: 0 auto; /* Centered horizontally */
-      padding: 0 1.5vw; /* Horizontal padding */
-      display: flex;
-      flex-direction: column; /* Stacks children vertically */
-      text-align: center; /* Centers text horizontally */
-      align-items: center; /* Centers items vertically */
-  }
+    .title {
+        font-size: 2rem; /* Larger title font size */
+        margin-bottom: 1rem;
+    }
 
-  .footer-divider {
-      width: 90%; /* 90% width */
-      border: none;
-      height: 0.15vw; /* Height relative to viewport width */
-      background-color: white; /* White color */
-  }
+    .form-control {
+        font-size: 1rem; /* Larger input font size */
+    }
 
-  #footer h5 {
-      margin: 0; /* No margin */
-      font-size: 2vw; /* Font size relative to viewport width */
-      line-height: 1.5; /* Line height */
-  }
+    .form-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-  .footer-links {
-      display: flex; /* Enables flexible box layout */
-  }
-
-  .footer-links a {
-      color: #fafafa; /* White color for links */
-      transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
-      padding: 3vw; /* Padding relative to viewport width */
-  }
-
-  .footer-links a:hover {
-      transform: translateY(-5px); /* Lifts the link slightly on hover */
-  }
-/* End of footer styles */
+    .btn {
+        padding: 0.5rem 1.5rem; /* Larger buttons */
+        font-size: 1rem;
+    }
 
 
-
-
-/* Styles for the about me page */
-
-/* Base styles */
-#about-me-main {
-  animation: fadeIn 1s forwards; /* Applies fadeIn animation for 1 second */
-  max-width: auto; /* Sets the maximum width to auto */
-  margin: 0 auto; /* Centers the element horizontally */
-  padding: 20px; /* Adds padding */
-  padding-bottom: 80px; /* Adds extra padding at the bottom */
-  color: white; /* Sets text color to white */
+/* General styles */
+.form {
+    background-color: rgba(0,0,0,0.6); /* Light background for the form */
+    backdrop-filter: saturate(180%) blur(2px);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow */
 }
 
-/* Image hover animation */
-.figure-for-about img:active {
-  transform: scale(1.05); /* Scales up the image slightly when active */
+.title {
+    color: white;
+    text-align: center;
 }
 
-/* Button hover animation */
-.about-button:hover {
-  transform: scale(1.05); /* Scales up the button slightly on hover */
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease; /* Adds smooth transition effects */
+.form-buttons {
+    margin-top: 1rem;
 }
 
-/* Adding smooth transition for other elements */
-#article-for-about, .aside-for-about, #section-for-about, #video-container {
-  transition: all 0.3s ease-in-out; /* Adds smooth transition for all properties */
+.submit-button{
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.3vw;
+    padding: 0.5vw;
+    transition: all 0.3s ease;
 }
 
-/* On hover, give the section a slight lift */
-#section-for-about:hover {
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Adds shadow to create a lifting effect */
+.submit-button:hover{
+    color: white;
+    background-color: #0d6efd;
 }
 
-/* Styles for the article */
-#article-for-about {
-  display: flex; /* Enables flex layout */
-  flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
-  justify-content: space-between; /* Spaces out items evenly */
+.cancel-button{
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.3vw;
+    padding: 0.5vw;
+    transition: all 0.3s ease;
 }
 
-/* Sidebar styles */
-.aside-for-about {
-  flex: 1; /* Takes up 1 portion of the available space */
-  max-width: 300px; /* Sets maximum width */
-  margin-right: 20px; /* Adds right margin */
+.cancel-button:hover{
+    background-color: #880808;
+    color: white;
 }
 
-.figure-for-about {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  padding: 2vw; /* Adds padding relative to viewport width */
-  border-radius: 5px; /* Rounds the corners */
+
+/* Styles for tables and page layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* Padding for content within the container */
 }
 
-.figure-for-about img {
-  max-width: 100%; /* Image takes up full width */
-  border-radius: 5px; /* Rounds the corners of the image */
-  transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px; /* Negative margin for gutter space */
 }
 
-.figure-for-about figcaption {
-  text-align: center; /* Centers text */
-  padding: 10px 0; /* Adds top and bottom padding */
-  font-style: italic; /* Italicizes the text */
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%; /* Full width column */
 }
 
-/* Main content styles */
-#section-for-about {
-  flex: 2; /* Takes up 2 portions of the available space */
-  padding: 20px; /* Adds padding */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  border-radius: 5px; /* Rounds the corners */
+/* Table styles */
+.table {
+    font-size: 1.5vw; /* Responsive font size based on viewport width */
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse; /* Collapsed border for a cleaner look */
 }
 
-.about-me-paragraph1 {
-  line-height: 1.6; /* Adjusts line height for better readability */
+.table th, .table td {
+    padding: 0.75rem;
+    border-top: 1px solid black; /* Top border only */
+    border-bottom: 1px solid black; /* Bottom border only */
 }
 
-/* Video container styles */
-#video-container {
-  margin-top: 4vw; /* Adds top margin relative to viewport width */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  padding: 20px; /* Adds padding */
-  border-radius: 5px; /* Rounds the corners */
-  text-align: center; /* Centers the content */
+.table thead th {
+    border-bottom: 2px solid black; /* Thicker bottom border for header cells */
 }
 
-.video-caption {
-  margin-bottom: 15px; /* Adds bottom margin */
+.text-center {
+    text-align: center; /* Centered text alignment */
 }
 
-.about-button {
-  margin-top: 2vw; /* Adds margin to button*/
-  background-color: black; /* Sets background color */
-  color: #fff; /* Sets text color to white */
-  border: none; /* Removes border */
-  padding: 10px 20px; /* Adds padding */
-  border-radius: 5px; /* Rounds the corners */
-  cursor: pointer; /* Changes cursor to pointer */
-  transition: all 0.5s ease; /* Smooth transition for all properties */
+/* Button styles */
+.btn, .edit-button, .delete-button {
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
-.about-button:active {
-  background-color: #004e92; /* Changes background color when active */
-  color: white; /* Keeps text color white */
+/* Edit and delete button styles */
+.edit-button, .delete-button {
+    font-size: 1.2vw;
+    padding: 0.5vw;
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content within buttons */
 }
 
-/* End of CSS specific to the "about-me" page */
-
-
-
-/* Projects page styles */
-#projects-content {
-  font-family: 'Arial', sans-serif; /* Sets font family */
-  color: white; /* Sets text color to white */
-  line-height: 1.6; /* Adjusts line height for better readability */
-  width: 80%; /* Sets width to 80% */
-  margin: 20px auto; /* Centers the content and adds margin */
-  max-width: 1000px; /* Sets maximum width */
+/* Edit button hover effect */
+.edit-button {
+    background-color: black;
+    color: white;
+    border: solid 1px transparent;
 }
 
-/* Project section styling */
-#projects-content .project-section {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  padding: 20px; /* Adds padding */
-  margin-bottom: 20px; /* Adds bottom margin */
-  border-radius: 5px; /* Rounds the corners */
-  transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+.edit-button:hover {
+    background-color: #0d6efd;
+    color: white;
 }
 
-/* Project heading */
-#projects-content h3 {
-  color: white; /* Sets text color to white */
-  margin-bottom: 10px; /* Adds bottom margin */
+/* Delete button styles and hover effect */
+.delete-button {
+    background-color: red;
+    color: white;
+    border: solid 1px red;
 }
 
-/* Project description */
-#projects-content .project-description {
-  color: white; /* Sets text color to white */
-  margin-bottom: 15px; /* Adds bottom margin */
+.delete-button:hover {
+    background-color: #880808;
+    color: white;
+    border: solid 1px #880808;
 }
 
-/* GitHub link styling */
-#projects-content .github-link {
-  display: inline-block; /* Changes display to inline-block */
-  background-color: black; /* Sets background color */
-  color: white; /* Sets text color to white */
-  padding: 10px 15px; /* Adds padding */
-  border-radius: 5px; /* Rounds the corners */
-  text-decoration: none; /* Removes text decoration */
-  transition: background-color 0.5s ease; /* Smooth transition for background color */
+/* Title styles */
+.title_assignmentsList {
+    font-size: 3.5vw;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 2vw;
 }
 
-#projects-content .github-link:hover {
-  background-color: white; /* Changes background color on hover */
-  color: black; /* Changes text color on hover */
+/* Icon styles */
+i {
+    margin-right: 0.5vw;
 }
-
-#projects-content .github-link:active {
-  background-color: #004e92; /* Changes background color when active */
-  color: white; /* Keeps text color white */
-}
-
-/* Icon styling */
-#projects-content .fa-github, #projects-content .fa-solid {
-  margin-left: 5px; /* Adds left margin */
-}
-
-#projects-content {
-  width: 90%; /* Sets width to 90% */
-  margin: 10px auto; /* Centers the content and adds margin */
-}
-
-#projects-content .project-section {
-  padding: 15px;
-}
-
-#projects-content .github-link {
-  padding: 8px 12px; /* Adjusts padding */
-}
-  /* End of projects styles */
-
-
-
-
-
-
-/* Contact page styling */
-#contact-content {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)); /* Sets a semi-transparent background with a linear gradient */
-  backdrop-filter: blur(10px); /* Applies a blur effect to the background */
-  padding: 30px; /* Adds padding around the form */
-  margin: 20px; /* Adds margin around the form */
-  border-radius: 10px; /* Rounds the corners */
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow effect */
-  width: 80%; /* Sets the width to 80% of the parent element */
-  margin: 0 auto; /* Centers the section horizontally */
-  margin-bottom: 3vw; /* Sets bottom margin */
-}
-
-#contact-content h1 {
-  color: white; /* Sets the color of the header text to white */
-  font-size: 7vw; /* Sets the font size relative to the viewport width */
-  text-align: center; /* Aligns the text to the center */
-  margin-bottom: 30px; /* Adds bottom margin */
-}
-
-#contact-content .input-group label {
-  margin-bottom: 8px; /* Adds bottom margin to the label */
-  color: white; /* Sets the color of the label text to white */
-}
-
-#contact-content input[type="text"],
-#contact-content input[type="email"],
-#contact-content textarea {
-  width: 100%; /* Makes input fields and textarea take full width */
-  padding: 10px; /* Adds padding */
-  margin-bottom: 20px; /* Adds bottom margin */
-  border: none; /* Removes border */
-  border-radius: 5px; /* Rounds the corners */
-  background-color: #f4f2ff; /* Sets background color */
-  outline: none; /* Removes outline on focus */
-}
-
-#contact-content .button-group {
-  display: flex; /* Uses flexbox for layout */
-  justify-content: space-between; /* Distributes space between buttons */
-}
-
-#contact-content .reset-button,
-#contact-content .submit-button {
-  padding: 10px 20px; /* Adds padding */
-  background-color: white; /* Sets background color */
-  color: black; /* Sets text color */
-  border: none; /* Removes border */
-  border-radius: 5px; /* Rounds the corners */
-  cursor: pointer; /* Changes cursor to pointer on hover */
-  transition: all 0.5s ease; /* Adds transition effect */
-  cursor: pointer; /* Changes cursor to pointer on hover */
-  transition: all 0.5s ease-in-out; /* Adds transition effect */
-}
-
-#contact-content .reset-button:active,
-#contact-content .submit-button:active {
-  background-color: #004e92; /* Changes background color on click */
-  color: white; /* Changes text color on click */
-}
-
-#contact-content .reset-button:hover,
-#contact-content .submit-button:hover {
-  background-color: black; /* Changes background color on hover */
-  color: white; /* Changes text color on hover */
-  cursor: pointer; /* Changes cursor to pointer on hover */
-}
-
-#contact-content i {
-  margin-right: 10px; /* Adds right margin to the icon */
-  cursor: pointer; /* Changes cursor to pointer on hover */
-}
-
-.contact-form, .social-links {
-  flex: 1; /* Sets flex grow to 1 */
-  padding: 0 20px; /* Adds horizontal padding */
-}
-
-.social-links {
-  background-color: black; /* Sets background color */
-  border-radius: 5px; /* Rounds the corners */
-  display: flex; /* Uses flexbox for layout */
-  justify-content: center; /* Centers items horizontally */
-  align-items: center; /* Centers items vertically */
-  gap: 20px; /* Sets space between icons */
-  margin-top: 7vw; /* Sets top margin relative to viewport width */
-}
-
-.social-links i {
-  margin: 20px; /* Adds margin around icons */
-  font-size: 2em; /* Sets font size */
-}
-
-/* End of CSS styling for contact page */
-
-
 
 }

@@ -1,0 +1,54 @@
+<%- include ../partials/header%> <!-- Include the header partial (EJS template) into the current page -->
+
+<%- include ../partials/navbar%> <!-- Include the navigation bar partial (EJS template) into the current page -->
+
+
+<main class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="title_assignmentsList"><%= title %> </h1>
+            <a href="/assignments-list/add" class="btn btn-primary">
+            <i class="fa-solid fa-plus"></i>
+                Add assignment
+            </a>
+            <br><br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center">Class</th>
+                        <th class="text-center">Name Of Assignment</th>
+                        <th class="text-center">Status</th>
+                        <th class="text-center">Due Date</th>
+                        <th class="text-center"></th>
+                        <th class="text-center"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let count = 0; count < AssignmentList.length; count++) { %>    
+                        <tr>
+                            <td class="text-center"><%= AssignmentList[count].Class %></td>
+                            <td class="text-center"><%= AssignmentList[count].Name %></td>
+                            <td class="text-center"><%= AssignmentList[count].Status %></td>
+                            <td class="text-center"><%= AssignmentList[count].Due %></td>
+                            <td class="text-center">
+                                <a href="/assignments-list/edit/<%= AssignmentList[count]._id %>" class="edit-button">
+                                <i class="fa-solid fa-pen-to-square"></i> 
+                                    Edit
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <a href="/assignments-list/delete/<%= AssignmentList[count]._id %>" class="delete-button" onclick="return confirmDelete()">
+                                    <i class="fa-solid fa-trash"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+<%- include ../partials/footer.ejs%> <!-- Include the footer partial (EJS template) into the current page -->
+
+<script src="/Scripts/deleteConfirmation.js"></script>

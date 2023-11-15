@@ -1,0 +1,48 @@
+<!DOCTYPE html> <!-- Specifies the document type and version of HTML (HTML5 in this case) -->
+
+<html lang="en"> <!-- Root element of the HTML document, with 'en' specifying that the content is in English -->
+
+<head> <!-- Head section of the HTML document containing metadata, links to stylesheets, etc. -->
+
+  <meta charset="UTF-8"> <!-- Specifies the character encoding for the document (UTF-8) -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- Viewport meta tag to control layout on mobile browsers -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <!-- Preconnect to Google Fonts to improve loading speeds -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <!-- Preconnect to the font file host with CORS policy -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> 
+  <!-- Link to the Google font 'Poppins' with specified weights -->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> 
+  <!-- Link to Google's Material Symbols Outlined font stylesheet -->
+
+  <title><%= title %></title> <!-- Title tag with an EJS variable 'title' to dynamically set the page title -->
+
+  <!-- CSS files-->
+  <link href="/Content/app.css" rel="stylesheet" type="text/css" media="only screen and (min-width:960px)"> 
+  <!-- Link to a CSS stylesheet for screens wider than 960px -->
+
+  <link href="/Content/tablet.css" rel="stylesheet" type="text/css" media="only screen and (min-width:481px) and (max-width:959px)"> 
+  <!-- Links to a CSS stylesheet specifically for tablet screen sizes -->
+
+  <link href="/Content/phone.css" rel="stylesheet" type="text/css" media="only screen and (max-width:480px)"> 
+  <!-- Link to a CSS stylesheet for screens smaller than 480px (phone screens) -->
+
+  <link href="/Content/assignments.css" rel="stylesheet">
+  <!-- Link to a CSS stylesheet for assignment-specific styling -->
+
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/> 
+  <!-- Link to the minified Bootstrap CSS file for styling -->
+
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+  <!-- Alternative link to Bootstrap CSS from CDN, currently commented out -->
+
+  <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css" /> 
+  <!-- Link to the Font Awesome icons stylesheet -->
+
+</head>

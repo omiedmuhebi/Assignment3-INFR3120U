@@ -1,0 +1,27 @@
+<!-- home page content -->
+
+<body class="homeBackground"> <!-- Sets the body with a class for styling the background -->
+  <div id="content"> <!-- Main content container -->
+    <!-- home page content -->
+    <% if (currentPage === 'home') { %> <!-- Server-side template condition to check if current page is 'home' -->
+    <div class="homeBody"> <!-- Container for the home page body -->
+      <div class="imageOverlay"></div> <!-- Div for an image overlay, possibly for styling -->
+      <div class="contentContainer"> <!-- Container for the content on the home page -->
+      <div class="headingHome"> <!-- Container for the headings -->
+        <h1 class="homeHeading1">Assignment</h1> <!-- Main heading part 1 -->
+        <h2 class="homeHeading2">Tracker</h2> <!-- Main heading part 2 -->
+      </div>
+    <p class="text-homePage"> <!-- Paragraph with class for styling -->
+      Welcome to Assignment Tracker! <!-- Introduction text -->
+      Quickly add, track, and manage your tasks with just a few clicks. Let's make achieving your 
+      academic goals smooth and stress-free. Get started now and turn your to-dos into done!
+    </p>
+
+    <a href="/assignments-list" class="buttonHome"> <!-- Link styled as a button to navigate to assignments list -->
+    Start tracking now
+    </a>
+    </div>
+    <% } %> <!-- End of server-side template condition -->
+    </div>
+  </div>
+</body>
