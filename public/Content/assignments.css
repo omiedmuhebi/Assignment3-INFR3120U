@@ -83,7 +83,6 @@
 
 /* Styles for tables and page layout */
 .container {
-    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px; /* Padding for content within the container */
