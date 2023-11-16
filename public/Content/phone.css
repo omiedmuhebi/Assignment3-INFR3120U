@@ -311,12 +311,13 @@ i {
 }
 
 .text-center{
-    font-size: 1.8vw; /*Change font size to 1.8 vw (table font)*/
+    font-size: 1.9vw; /*Change font size to 1.8 vw (table font)*/
 }
 
 .title_assignmentsList{
     font-size: 7vw;
     margin: 7vw;
+    color: black;
 }
 
 }
